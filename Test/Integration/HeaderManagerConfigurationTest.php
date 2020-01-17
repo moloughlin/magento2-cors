@@ -28,4 +28,9 @@ class HeaderManagerConfigurationTest extends TestCase
     {
         $this->markTestIncomplete('This test has not been implemented yet.');
     }
+
+    public function testTheHeaderManagerIsPlugedinInTheRestScopeAroundTheRestResponse()
+    {
+        $this->markTestIncomplete('This test has not been implemented yet.');
+    }
 }

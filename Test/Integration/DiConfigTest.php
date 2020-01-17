@@ -64,6 +64,17 @@ class DiConfigTest extends TestCase
     }
 
     /**
+     * @magentoAppArea webapi_rest
+     */
+    public function testItPresentsAConcretionForTheCorsValidatorInterfaceInTheWebApiRestScope()
+    {
+        $this->assertInstanceOf(
+            CorsValidator::class,
+            $this->objectManager->get(CorsValidatorInterface::class)
+        );
+    }
+
+    /**
      * @magentoAppArea global
      */
     public function testItDoesNotPresentAConcretionForTheCorsConfigurationInterfaceInTheGlobalScope()
@@ -76,6 +87,17 @@ class DiConfigTest extends TestCase
      * @magentoAppArea graphql
      */
     public function testItPresentsAConcretionForTheCorsConfigurationInterfaceInTheGraphQlScope()
+    {
+        $this->assertInstanceOf(
+            CorsConfiguration::class,
+            $this->objectManager->get(CorsConfigurationInterface::class)
+        );
+    }
+
+    /**
+     * @magentoAppArea webapi_rest
+     */
+    public function testItPresentsAConcretionForTheCorsConfigurationInterfaceInTheWebApiRestScope()
     {
         $this->assertInstanceOf(
             CorsConfiguration::class,
