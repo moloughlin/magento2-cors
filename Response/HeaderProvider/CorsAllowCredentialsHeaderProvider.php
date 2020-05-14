@@ -45,11 +45,11 @@ class CorsAllowCredentialsHeaderProvider extends AbstractHeaderProvider implemen
 
     public function getValue()
     {
-        return $this->configuration->getAllowCredentials() ? "true" : "false";
+        return "true";
     }
 
     public function canApply()
     {
-        return $this->validator->originIsValid() && $this->getValue();
+        return $this->validator->originIsValid() && $this->configuration->getAllowCredentials();
     }
 }
