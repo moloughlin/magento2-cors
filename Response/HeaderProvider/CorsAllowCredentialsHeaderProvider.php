@@ -11,14 +11,14 @@ use Magento\Framework\App\Response\HeaderProvider\AbstractHeaderProvider;
 use Magento\Framework\App\Response\HeaderProvider\HeaderProviderInterface;
 
 /**
- * CorsAllowCredentials is responsible for adding the header
+ * CorsAllowCredentialsHeaderProvider is responsible for adding the header
  * Access-Control-Allow-Credentials to a response.
  * @author    Matthew O'Loughlin <matthew@aligent.com.au>
  * @copyright Graycore, LLC (https://www.graycore.io/)
  * @license   MIT https://github.com/graycoreio/magento2-cors/license
  * @link      https://github.com/graycoreio/magento2-cors
  */
-class CorsAllowCredentials extends AbstractHeaderProvider implements HeaderProviderInterface
+class CorsAllowCredentialsHeaderProvider extends AbstractHeaderProvider implements HeaderProviderInterface
 {
     /**
      * @var string
