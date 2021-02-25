@@ -9,11 +9,12 @@
                 <item name="CorsAllowOrigin" xsi:type="object">Graycore\Cors\Response\HeaderProvider\CorsAllowOriginHeaderProvider</item>
                 <item name="CorsAllowMethods" xsi:type="object">Graycore\Cors\Response\HeaderProvider\CorsAllowMethodsHeaderProvider</item>
                 <item name="CorsMaxAge" xsi:type="object">Graycore\Cors\Response\HeaderProvider\CorsMaxAgeHeaderProvider</item>
+                <item name="CorsAllowCredentials" xsi:type="object">Graycore\Cors\Response\HeaderProvider\CorsAllowCredentialsHeaderProvider</item>
             </argument>
         </arguments>
     </type>
     <type name="Magento\Webapi\Controller\Rest">
-        <plugin name="graycoreCorsPreflightHandlerRest" type="Graycore\Cors\Response\PreflightRequestHandler" />
+        <plugin name="graycoreCorsPreflightHandlerRest" type="Graycore\Cors\Response\Preflight\Rest\PreflightRequestHandler" />
     </type>
     <type name="Magento\Framework\Webapi\Rest\Response">
         <plugin name="genericWebApiHeaderPlugin" type="Graycore\Cors\Response\HeaderManager"/>
